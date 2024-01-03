@@ -1,0 +1,22 @@
+import random
+sayı=random.randint(1,10)
+can=int(input("KAÇ HAKKINIZ OLSUN İSTERSİNİZ?:"))
+hak=can
+sayac=0
+while hak>0:
+    hak-=1
+    sayac+=1
+    tahmin=int(input("tahmininizi giriniz:"))
+
+    if sayı==tahmin:
+        print(f'TEBRİKLER {sayac}.tahminde BİLDİNİZ!. Toplam puanınız:{100- (100/can)*(sayac-1)}')
+        break
+    elif sayı>tahmin:
+        print("Tahmin ettiğiniz sayı normal değerden küçük.Tekrar deneyiniz")
+    else:
+        print("Tahmin ettiğiniz sayı normal değerden büyük tekrar deneyiniz")
+
+    if hak==0:
+        print(f'Hakkınız bitti. Tutulan sayı:{sayı}')
+
+#tahmin oyunu
